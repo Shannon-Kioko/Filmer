@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Filmer/static/css/main.ccfd3975.css",
+    "main.js": "/Filmer/static/js/main.fe99b569.js",
+    "static/js/453.dcee6cae.chunk.js": "/Filmer/static/js/453.dcee6cae.chunk.js",
+    "static/media/search.svg": "/Filmer/static/media/search.ed1a61801585197cbee721dc1c837237.svg",
+    "index.html": "/Filmer/index.html",
+    "main.ccfd3975.css.map": "/Filmer/static/css/main.ccfd3975.css.map",
+    "main.fe99b569.js.map": "/Filmer/static/js/main.fe99b569.js.map",
+    "453.dcee6cae.chunk.js.map": "/Filmer/static/js/453.dcee6cae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccfd3975.css",
+    "static/js/main.fe99b569.js"
+  ]
+}
