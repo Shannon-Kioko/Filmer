@@ -4,13 +4,27 @@ import searchIcon from './search.svg'
 import MovieCard from './MovieCard';
 
 const API_URL = 'http://www.omdbapi.com?apikey=9aa067dd'
-// const movie1 = {
-//   "Title": "Mission: Impossible - Ghost Protocol",
-//   "Year": "2011",
-//   "imdbID": "tt1229238",
-//   "Type": "movie",
-//   "Poster": "https://m.media-amazon.com/images/M/MV5BMTY4MTUxMjQ5OV5BMl5BanBnXkFtZTcwNTUyMzg5Ng@@._V1_SX300.jpg"
-// }
+let movie1 = [{
+  "Title": "Mission: Impossible - Ghost Protocol",
+  "Year": "2011",
+  "imdbID": "tt1229238",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTY4MTUxMjQ5OV5BMl5BanBnXkFtZTcwNTUyMzg5Ng@@._V1_SX300.jpg"
+},
+{
+  "Title": "Mission: Impossible - Ghost Protocol",
+  "Year": "2011",
+  "imdbID": "tt1229238",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTY4MTUxMjQ5OV5BMl5BanBnXkFtZTcwNTUyMzg5Ng@@._V1_SX300.jpg"
+},
+{
+  "Title": "Mission: Impossible - Ghost Protocol",
+  "Year": "2011",
+  "imdbID": "tt1229238",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTY4MTUxMjQ5OV5BMl5BanBnXkFtZTcwNTUyMzg5Ng@@._V1_SX300.jpg"
+}]
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -19,9 +33,11 @@ function App() {
   const searchMovies = async (title) => {
     try {
       
-      const response = await fetch(`${API_URL}&s=${title}`)
+      const response = await fetch(`${API_URL}&s=${title}`, {headers: "Access-Control-Allow-Origin: *"})
       const data = await response.json()
       setMovies(data.Search);
+      console.log(movies);
+
     } catch (error) {
       console.error();
     }
@@ -47,8 +63,7 @@ function App() {
       <div className="container">
         {movies.length > 0 ? (
           <div>
-            {movies.map((movie) =>{
-              <MovieCard movie={movie}/>
+            {movies.map((movie) => { return <MovieCard movie={movie1}/>
             })}
           </div>
         ) : (

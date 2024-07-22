@@ -8,7 +8,8 @@ return (
     </div>
     <div>
         <img
-         src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/400'} />
+         src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/400'}
+         alt="Movie Poster" />
     </div>
     <div>
         <span>{movie.Type}</span>
